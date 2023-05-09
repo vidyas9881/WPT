@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>print date and time</title>
+    <script>
+        function displaydate() {
+            const date = new Date();
+            var day = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
+            var month = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
+            
+
+            var date1 = new Date();
+            var date2 = new Date(`01/01/${new Date().getFullYear()+1}`);
+          // alert(date1.getTime())
+
+            var remdays=((date2.getTime()-date1.getTime())/(1000*60*60*24))
+           
+            var msg = 'Today is '
+            msg += day[new Date().getDay()] + ', ' + new Date().getDate() + ' ' + month[new Date().getMonth()] + ' ' + new Date().getFullYear() + ', Welcome, and Good Afternoon to You.<br>Number of days left till end of year: ' + Math.floor(remdays);
+
+
+
+            document.getElementById("mydiv").innerHTML = msg;
+        }
+
+    </script>
+
+
+</head>
+
+<body onload="displaydate()">
+    <div id="mydiv"></div>
+</body>
+
+</html>

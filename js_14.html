@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>circle and rectagle</title>
+
+    <script>
+
+   function dispShape()
+   {
+
+    var shapes={
+        rectangle : {
+        length:12,
+        height:40,
+        area(){ return this.length*this.height},
+        perimeter(){ return 2*(this.length+this.height)} 
+         },
+         circle: {
+        radius:12,
+        area(){ return 3.14*this.radius*this.radius},
+         circumference(){ return 2*3.24*this.radius} 
+         }
+    }
+
+ 
+
+  msg=`rectangle <br>
+       length :: ${shapes.rectangle.length} <br> 
+       height :: ${shapes.rectangle.height} <br>
+       area   :: ${shapes.rectangle.area()}<br>
+       perimeter :: ${shapes.rectangle.perimeter()} <br> <br> 
+       circle<br>
+       radius :: ${shapes.circle.radius} <br> 
+       area   :: ${shapes.circle.area()}<br>
+       circumference :: ${shapes.circle.circumference()} <br> 
+       `
+  document.getElementById('mydiv').innerHTML=msg;
+
+
+   }
+
+    </script>
+
+</head>
+<body onload="dispShape()">
+    <div id="mydiv">
+        
+    </div>
+</body>
+</html>

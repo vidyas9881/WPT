@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>print even numbers</title>
+
+    <script>
+       function printEven()
+        {
+            document.getElementById("mydiv").innerHTML ="";
+            var num = parseInt(document.getElementById("num").value);
+            for (i = 1; i <= num; i++) {
+                if(i%2==0){
+                document.getElementById("mydiv").innerHTML += i + "<br>";
+                // document.writeln(i);
+                }
+            }
+        }
+
+    </script>
+</head>
+<body>
+    
+    <label for="num">Number :</label><input type="number" id="num">
+
+    <input type="button" value="print even numbers" onclick="printEven()">
+
+    <div id="mydiv"></div>
+
+</body>
+</html>

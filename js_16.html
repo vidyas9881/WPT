@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>find sites in array</title>
+
+
+    <script>
+        var sitesArray = ['www.google.com', 'www.msn.com',
+            'www.amazon.co.in', 'in.answers.yahoo.com', 'en.m.wikipedia.com', 'codehs.gitbooks.io', 'www.coderanch.com']
+        var count = 0
+
+        function searchSites() {
+            console.log(sitesArray)
+            sitesArray.forEach(i => {
+                if (i.startsWith('www')) { return ++count }
+
+            });
+
+            document.getElementById('mydiv').innerHTML = 'Array::  '+ sitesArray+'<br> No of valid sites ::'+ count;
+        }
+
+
+
+
+
+    </script>
+</head>
+
+<body onload="searchSites()">
+    <div id="mydiv"></div>
+
+</body>
+
+</html>

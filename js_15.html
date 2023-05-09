@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>reverse strings in array and sort</title>
+
+
+    <script>
+        function revArray() {
+            var array = [
+                'sourabh', 'vidyas', 'prajawal', 'Tushar', 'chandan'
+            ]
+            document.getElementById('mydiv').innerHTML = 'array  ::' + array + '<br>';
+
+            var revArray = [];
+
+            array.forEach(i => {
+                revArray.push([...i].reduce((x, y) => y.concat(x)))
+            });
+            revArray.sort();
+            document.getElementById('mydiv').innerHTML += 'array  ::' + revArray + '<br>';
+
+
+        }
+    </script>
+</head>
+
+<body onload="revArray()">
+    <div id="mydiv"></div>
+</body>
+
+</html>

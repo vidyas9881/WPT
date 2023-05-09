@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String functions</title>
+
+    <style>
+#div1{
+    border: 2px solid blue;
+    padding: 10px;
+}
+
+
+    </style>
+
+    <script>
+        let op;
+        function display() {
+            [...document.getElementsByName("operation")].forEach(i =>{ 
+            if(i.checked) {op=(i.value)}})
+            
+
+            let str=document.getElementById('str1').value
+        let substr=document.getElementById('substr').value
+        let rstr=document.getElementById('rStr').value
+
+        if(op==='search')
+        {
+            document.getElementById('mydiv').innerHTML=`<br>Sub string present at ::`+str.search(substr)
+        }
+
+        if(op==='upper')
+        {
+            document.getElementById('mydiv').innerHTML=`<br>To upper case ::`+str.toUpperCase()
+        }
+        if(op==='lower')
+        {
+            document.getElementById('mydiv').innerHTML=`<br>To lower case ::`+str.toLowerCase()
+        }
+
+        if(op==='trim')
+        {
+            document.getElementById('mydiv').innerHTML=`<br>String after trim::`+str.trim()
+        }
+
+
+        if(op==='concate')
+        {
+            document.getElementById('mydiv').innerHTML=`<br>Concatenated string::`+str.concat(substr)
+        }
+
+        if(op==='replace')
+        {
+            document.getElementById('mydiv').innerHTML=`<br>Replaced string::`+str.replace(substr,rstr)
+        }
+
+
+        }
+        
+
+
+
+    </script>
+
+</head>
+
+<body>
+
+    <div id="div1">
+        <label for="str1">Enter string::</label> <input type="text" id="str1"><br><br>
+        <label for="substr">Enter sub string::</label> <input type="text" id="substr"> <br> <br>
+        <label for="rStr">Enter string to replace::</label> <input type="text" id="rStr"><br><br>
+
+        <input type="radio" name="operation" id="search" value="search"> <label for="search">Search substring in main
+            string</label>
+        <input type="radio" name="operation" id="upper" value="upper"><label for="upper">To upper case</label>
+        <input type="radio" name="operation" id="lower" value="lower"><label for="lower">To lower case</label>
+        <input type="radio" name="operation" id="trim" value="trim"><label for="trim">Trim space</label>
+        <input type="radio" name="operation" id="concate" value="concate"><label for="concate">Concatenate</label>
+        <input type="radio" name="operation" id="replace" value="replace"><label for="replace">Replace</label>
+        <br>
+          <br>
+        <input type="button" value="submit Query" onclick="display()">
+        <div id="mydiv"></div>
+
+
+    </div>
+
+</body>
+
+</html>

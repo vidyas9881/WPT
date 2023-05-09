@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Area and Circumference of circle</title>
+    <style>
+ #a{
+    border: 2px solid blue;
+    padding: 30px;
+    width: 300px;
+}
+    </style>
+
+    <script>
+
+function display()
+{
+    let radius=parseInt(document.getElementById("radius").value)
+     
+    let area=3.14*radius*radius
+
+    let circumference =2*3.14*radius
+
+    document.getElementById("mydiv").innerHTML += `area :`+area + ` <br> Circumference :`+ circumference
+
+
+}
+    </script>
+</head>
+<body>
+    
+    <div id="a">Enter radius::<input type="text" id="radius"> <br> <br>
+    
+     <input type="button" value="display" onclick="display()" >
+    <div id="mydiv"></div>
+    </div>
+
+
+</body>
+</html>

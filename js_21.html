@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>print array in list</title>
+
+<script>
+    function print()
+    {
+    let array =['Jhon','Steve','Ben','Damon','Ian']
+    let str=' <h3>Members of my Group are</h3> <br> <ol id="list"> '
+        for(let i=0;i<array.length;i++)
+        str+=`<li>${array[i]}</li>`
+           
+        str+='</ol>'
+    document.getElementById("mydiv").innerHTML=str
+    }
+
+</script>
+
+</head>
+<body onload="print()">
+    
+  
+    <div id="mydiv"></div>
+
+</body>
+</html>

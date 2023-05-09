@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+
+    <script>
+        let principal;
+        let rate;
+        let years;
+
+        function compute() {
+            principal = parseInt(document.getElementById('principal').value)
+            rate = parseInt(document.getElementById('rate').value)
+            years = parseInt(document.getElementById('years').value)
+            if ((validate()) && (validate1()) && (validate2())) {
+                let interest = ((principal * rate * years) / 100);
+                document.getElementById('monthpay').value = ((interest + principal) / (years * 12))
+
+                document.getElementById('totalpay').value = (interest + principal)
+                document.getElementById('interest').value = (interest)
+            }
+        }
+
+        function validate() {
+         
+            if ((((document.getElementById('principal').value).includes("e")) != false)) {
+                alert('enter valid input number only in principal')
+                return false;
+            }
+            else if ((principal > 1500000)) {
+                alert('pricnipal can not be more than 1500000')
+                return false;
+            }
+            return true;
+        }
+
+        function validate1() {
+     
+            if ((((document.getElementById('rate').value).includes("e")) != false)) {
+                alert('enter valid input number only in rate')
+                return false;
+            }
+            return true;
+        }
+        function validate2() {
+           
+            if ((((document.getElementById('years').value).includes("e")) != false)) {
+                alert('enter valid input number only in years')
+                return false;
+            }
+            else if((years<=7) || (years>=15))
+            {
+                alert('years should be between 7 and 15')
+                return false; 
+            }
+            return true;
+        }
+
+
+    </script>
+</head>
+
+<body>
+    <div style="border: 2px solid blue;">
+
+
+        <table style="margin: auto;">
+
+            <tr>
+                <td colspan="2">
+                    <h3>Enter loan Information:</h3>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <li>Amount of the loan(any currency) :</li>
+                </td>
+                <td> <input type="number" id="principal"></td>
+            </tr>
+            <tr>
+                <td>
+                    <li>Annual percentage rate of interest :</li>
+                </td>
+                <td> <input type="number" id="rate"></td>
+            </tr>
+            <tr>
+                <td>
+                    <li>Repayment period in years:</li>
+                </td>
+                <td> <input type="number" id="years"></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <br>
+                    <input type="button" value="Compute" onclick="compute()">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <h3>Payment Information:</h3>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <li>Your monthly payment will be :</li>
+                </td>
+                <td> <input type="number" readonly id="monthpay"></td>
+            </tr>
+            <tr>
+                <td>
+                    <li>your total payment will be:</li>
+                </td>
+                <td> <input type="number" readonly id="totalpay"></td>
+            </tr>
+            <tr>
+                <td>
+                    <li>Your total interest payment will be:</li>
+                </td>
+                <td> <input type="number" readonly id="interest"></td>
+            </tr>
+
+        </table>
+
+    </div>
+
+</body>
+
+</html>

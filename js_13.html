@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>display employee details in table </title>
+    
+    <script>
+        var employee=[
+            {empid:01,empname:'sourabh',salary:50000},
+            {empid:02,empname:'vidyas',salary:80000},
+            {empid:03,empname:'prajwal',salary:100000},
+            {empid:04,empname:'pratik',salary:75000}
+        ]
+function dispEmp()
+{ 
+    str=`<table border= 1px > 
+        <tr>
+            <th>ID</th><th>name</th> <th>salary</th>
+            
+        </tr>`
+
+        console.log(employee);
+            
+ employee.forEach(i=>{
+    str+=`<tr>
+            <td>${i.empid}</td><td>${i.empname}</td><td>${i.salary}</td>
+        </tr>`
+
+ })
+        
+        
+
+     str+=`</table>`
+     document.getElementById('mydiv').innerHTML=str;
+    }
+    </script>
+</head>
+<body onload="dispEmp()">
+    <div id="mydiv">
+        
+    </div>
+</body>
+</html>

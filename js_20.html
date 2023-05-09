@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>print array in string format</title>
+
+    <script>
+        function print()
+        {
+       let array=['john','steve','ben','damon','ian']
+       
+       let str=array.map(i=>i.toUpperCase()).join()
+
+      document.getElementById('mydiv').innerHTML='String of members in uppercase :: '+str;
+    }
+    </script>
+</head>
+<body onload="print()">
+    
+    <div id="mydiv"></div>
+</body>
+</html>
