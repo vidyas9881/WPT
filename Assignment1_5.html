@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment1_5</title>
+</head>
+<body>
+    <form >
+        <table border="1px" style="background-color: rgb(225, 158, 158); border-collapse: collapse  ; border: 2px black;">
+            <tbody>
+                <tr>
+                    <td>Name</td>
+                    <td><input type="text" name="name" autofocus></td>
+                </tr>
+                <tr>
+                    <td>Employee Code</td>
+                    <td><input type="text" name="EmployeeCode"></td>
+                </tr>
+                <tr>
+                    <td>Department</td>
+                    <td> <input type="radio" name="Department" id="d1"> <label for="d1"> ADMIN</label><br>
+                        <input type="radio" name="Department" id="d2"><label for="d2"> HR</label><br>
+                        <input type="radio" name="Department" id="d3"><label for="d3"> TECHNICAL</label><br>
+                        <input type="radio" name="Department" id="d4"><label for="d4"> ACCOUNTS</label></td>
+                </tr>
+                <tr>
+                    <td>Date of Joining</td>
+                    <td><input type="text" size="3px"> / <input type="text"size="3px"> / <input type="text"size="4px"><br>
+                        <span style="width: 100%;">dd &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   mm  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; yyyy</span>
+                        </td>
+                      
+                       
+                </tr>
+                <tr>
+                    <td>Address</td>
+                    <td><textarea name="Address" id="add" cols="30" rows="7"></textarea></td>
+                </tr>
+                <tr>
+                    <td>Training Programs Attended</td>
+                    <td>
+                        <input type="checkbox" name="html" id="c1"> <label for="c1"> HTML/DHTML</label> <br>
+                        <input type="checkbox" name="java" id="c2"> <label for="c2"> JAVA</label> <br>
+                        <input type="checkbox" name="client/server" id="c3"> <label for="c3"> CLIENT/SERVER</label> <br>
+                        <input type="checkbox" name=".net" id="c4"> <label for="c4">.NET</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Training Programmes need to attend</td>
+                    <td><select name="select" id="select" size="2" >
+                        <option value="js">JAVASCRIPT</option>
+                        <option value="jstruts">JSTRUTS</option>
+                        <option value="jss">CSS</option>
+                    </select></td>
+                </tr>
+                <tr>
+                    <td>Send the information at</td>
+                    <td><a href="#">empinfo@patni.com</a></td>
+                </tr>
+                
+            </tbody>
+        </table>
+    </form>
+</body>
+</html>

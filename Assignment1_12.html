@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .right{
+            text-align: right;
+            color: white;
+        }
+        .left{
+            padding: 0 5px;
+            margin: 0 10px;
+            color: white;
+            
+        }
+       input[type="text"]{
+        background-color: black;
+        color: white;
+       }
+    </style>
+</head>
+
+
+<body style="background-color: black;">
+
+<form >
+    <fieldset style="width: 30%;margin: auto; border: 5px solid rgb(34, 17, 215); border-radius: 20px;">
+        <legend style="background-color: rgb(34, 17, 215); border-radius: 5px;color: white;">Name and address</legend>
+        <table style="height: 200px; ">
+            <tr>
+                <td class="right"> <label for="ssn" > SSN:</label></td>
+                <td class="left"> <input type="text" name="ssn" id="ssn" >
+                <span style="background-color: rgb(34, 17, 215); border-radius: 5px; color: white;">Fill in name and address</span></td>
+            </tr>
+
+
+            <tr>
+                <td class="right"> <label for="fname"> Full name:</label></td>
+                <td class="left"> <input type="text" name="fname" id="fname"></td>
+            </tr>
+
+            <tr>
+                <td class="right"> <label for="address"> Street and number:</label></td>
+                <td class="left"> <input type="text" name="address" id="address"></td>
+            </tr>
+
+            <tr>
+                <td class="right"> <label for="pcode"> Postal code:</label></td>
+                <td class="left"> <input type="number" name="pcode" id="pcode" style="background-color: black; color: white;"></td>
+            </tr>
+
+            <tr>
+                <td class="right"> <label for="city"> City:</label></td>
+                <td class="left"> <input type="text" name="city" id="city"></td>
+            </tr>
+
+          
+
+        </table>
+    </fieldset>
+
+ <br>
+
+
+    <fieldset style="width: 30%;margin: auto; border: 5px solid rgb(34, 17, 215); border-radius: 20px;">
+        <legend style="background-color: rgb(34, 17, 215); border-radius: 5px;color: white;">Username and password</legend>
+        <table style="height: 80px; ">
+            <tr>
+                <td class="right"> <label for="uname" > &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Username:</label></td>
+                <td class="left"> <input type="text" name="uname" id="uname">
+                <span style="background-color: rgb(34, 17, 215); border-radius: 5px; color: white;">Fill in name and address</span></td>
+            </tr>
+
+
+            <tr>
+                <td class="right"> <label for="password"> Password:</label></td>
+                <td class="left"> <input type="password" name="password" id="password" style="background-color: black; color: white;"> <br>
+              
+            </td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td class="left">
+                    <input type="checkbox" name="showpasswd" id="showpasswd"><label for="showpasswd"> show password</label>
+                </td>
+            </tr>
+
+        </table>
+    </fieldset>
+ <br>
+    <input type="submit" value="Register" style="background-color: rgb(34, 17, 215) ; color: white; margin-left: 685px;">
+</form>
+    
+</body>
+</html>

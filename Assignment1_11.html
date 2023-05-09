@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .right{
+            text-align: right;
+        }
+        .left{
+            padding: 0 50px;
+            margin: 0 10px;
+        }
+       
+    </style>
+</head>
+
+<body style="background-color:rgb(45, 127, 198) ;">
+
+    <fieldset style="width: 40%;margin: auto;">
+        <legend>Registration Details</legend>
+        <table style="height: 350px; ">
+            <tr>
+                <td class="right"> <label for="uni"> University:</label></td>
+                <td class="left"> <input type="text" name="uni" id="uni"></td>
+            </tr>
+
+
+            <tr>
+                <td class="right"> <label for="institute"> Institute:</label></td>
+                <td class="left"> <input type="text" name="institute" id="institute"></td>
+            </tr>
+            <tr>
+                <td class="right"> <label for="branch"> Branch:</label></td>
+                <td class="left"> <select name="Branch" id="branch">
+                        <option value="" disabled selected>--Select--</option>
+                        <option value="">Mechanical</option>
+                        <option value="">IT</option>
+                        <option value="">Computer</option>
+                    </select></td>
+            </tr>
+            <tr>
+                <td class="right"> <label for="deg"> Degree:</label></td>
+                <td class="left"> <select name="degree" id="deg">
+                        <option value="" disabled selected>--Select--</option>
+                        <option value="">BE</option>
+                        <option value="">B-Tech</option>
+                        <option value="">M-Tech</option>
+
+                    </select>
+                    <input type="radio" name="select" id="pur"><label for="pur"> Pursuing</label>
+                    <input type="radio" name="select" id="com"><label for="com"> Completed</label>
+                </td>
+            </tr>
+            <tr>
+                <td class="right"> <label for="cpi">Average CPI:</label></td>
+                <td class="left"> <input type="number" id="cpi" style="width: 35px;"> Upto 
+                <input type="number" style="width: 35px;"> Th Semister</td>
+            </tr>
+            <tr>
+                <td class="right"> <label for="exp" > Experience:</label></td>
+                <td class="left"> <input type="number" id="exp"> Years</td></td>
+            </tr>
+            <tr>
+                <td class="right"> <label for="site"> Your Website Or Blog:</label></td>
+                <td class="left"> <input type="url" value="http://" id="site"></td>
+            </tr>
+
+        </table>
+    </fieldset>
+
+</body>
+
+</html>

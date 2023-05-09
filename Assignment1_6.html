@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* .outerdiv {
+        gap: 50px;
+       } */
+
+        .outerdiv {
+            justify-content: space-between;
+        }
+
+        .outerdiv div {
+            width: 100%;
+            margin: 15px auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div style="border: 2px solid blue; padding: 10px;">
+        <h2>Internet Usage Survey</h2>
+        <p>This survey is being conducted to help identify the Internet uses patterns of our customers. <br> Please take
+            a
+            few moments to complete and submit this short form. Thank you for your coopration.</p>
+        <form>
+
+
+
+
+            <div style="display: flex; " class="outerdiv">
+                <div>What type of internet connection do you have? <br>
+                    (Select One)
+
+                </div>
+                <div>
+
+                    <select name="internetconn" id="conn" size="4">
+                        <option value="conn1">Dial-up</option>
+                        <option value="conn2"> DSL</option>
+                        <option value="conn2"> High speed cable</option>
+                        <option value="conn3">Other</option>
+
+                    </select>
+
+                </div>
+            </div>
+
+
+            <div style="display: flex; " class="outerdiv">
+                <div>What type of computer do you use most at home?
+
+                </div>
+                <div><input type="radio" name="comp" id="comp1"> <label for="comp1">Desktop</label>
+                    <input type="radio" name="comp" id="comp2"><label for="comp2">Laptop</label>
+
+                </div>
+            </div>
+
+
+            <div style="display: flex; " class="outerdiv">
+                <div>How would you describe your main reason for using the Internet?
+
+                </div>
+                <div> <input type="radio" name="reason" id="reas1"><label for="reas1">To do work related
+                        activities</label><br>
+                    <input type="radio" name="reason" id="reas2"><label for="reas2">To do school-related
+                        activities</label><br>
+                    <input type="radio" name="reason" id="reas3"><label for="reas3">For entertainment
+                        purposes</label><br>
+                    <input type="radio" name="reason" id="reas4"><label for="reas4">Other activities</label>
+
+                </div>
+            </div>
+
+
+            <div style="display: flex; " class="outerdiv">
+                <div>
+                    <fieldset>
+                        <legend>Types of sites visited</legend>
+                        What type of web sites do you access most often?<br>Check all that apply. <br><br>
+                        <input type="checkbox" name="sites" id="sites1"><label for="sites1">Self
+                            Improvement</label><br>
+                        <input type="checkbox" name="sites" id="sites2"><label for="sites2">Entertainment</label><br>
+                        <input type="checkbox" name="sites" id="sites3"><label for="sites3">News and
+                            Sports</label><br>
+                        <input type="checkbox" name="sites" id="sites4"><label for="sites4">Reference</label><br>
+                        <input type="checkbox" name="sites" id="sites3"><label for="sites3">Email</label>
+
+                    </fieldset>
+
+                </div>
+                <div>
+                    <fieldset>
+                        <legend>Time spent using Internet</legend>
+                        <br>
+                        During an average week, how long do you spend online?<br><br>
+                        <input type="radio" name="timespent" id="timespent1" type=""><label for="timespent1">0-3
+                            Hours</label><br>
+                        <input type="radio" name="timespent" id="timespent2"><label for="timespent2">4-6
+                            Hours</label><br>
+                        <input type="radio" name="timespent" id="timespent3"><label for="timespent3">7-10
+                            Hours</label><br>
+                        <input type="radio" name="timespent" id="timespent4"><label for="timespent4">11-14
+                            Hours</label><br>
+                        <input type="radio" name="timespent" id="timespent5"><label for="timespent5">15+
+                            Hours</label>
+
+
+                    </fieldset>
+
+                </div>
+            </div>
+
+
+            <div style="display: flex; " class="outerdiv">
+                <div>
+                    <label for="fname">First name: </label> <input type="text" id="fname">
+                </div>
+                <div>
+                    <label for="lname">Last name: </label> <input type="text" id="lname">
+                </div>
+            </div>
+
+
+            <div style="display: flex; " class="outerdiv">
+                <div>
+                    <label for="age">Age: </label> <input type="text" id="age">
+                </div>
+                <div>
+                    <label for="zipcode">Zip Code: </label> <input type="text" id="zipcode">
+                </div>
+            </div>
+            <div style="text-align: center;margin-top: 20px;">
+                <input type="submit" value="Click to Submit">&nbsp;&nbsp;&nbsp;
+                <input type="reset" value="Clear form">
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
